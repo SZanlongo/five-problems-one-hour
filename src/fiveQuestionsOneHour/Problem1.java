@@ -15,10 +15,12 @@ public class Problem1 {
 		if (a == null) {
 			throw new NullPointerException();
 		}
+
 		int sum = 0;
 		for (int i = 0; i < a.length; i++) {
 			sum += a[i];
 		}
+
 		return sum;
 	}
 
@@ -26,16 +28,18 @@ public class Problem1 {
 		if (a == null) {
 			throw new NullPointerException();
 		}
+
 		int sum = 0;
 		int i = 0;
 		while (i < a.length) {
 			sum += a[i++];
 		}
+
 		return sum;
 	}
 
 	private static int recursiveSum(int[] a) {
-		return recursiveSum(a, a.length-1);
+		return recursiveSum(a, a.length - 1);
 	}
 
 	private static int recursiveSum(int[] a, int i) {
@@ -45,6 +49,7 @@ public class Problem1 {
 		if (i == 0) {
 			return a[0];
 		}
+
 		return a[i] + recursiveSum(a, i - 1);
 	}
 

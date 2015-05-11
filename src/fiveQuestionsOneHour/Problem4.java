@@ -16,7 +16,17 @@ public class Problem4 {
 	}
 
 	private static String largestNumber(Integer[] a) {
-		Arrays.sort(a, new Comparator() {
+		compare(a);
+		String result = "";
+		for (Integer integer : a) {
+			result += integer.toString();
+		}
+
+		return result;
+	}
+
+	private static void compare(Integer[] a) {
+		Arrays.sort(a, new Comparator<Object>() {
 
 			@Override
 			public int compare(Object lhs, Object rhs) {
@@ -26,11 +36,5 @@ public class Problem4 {
 				return (v1 + v2).compareTo(v2 + v1) * -1;
 			}
 		});
-		String result = "";
-		for (Integer integer : a) {
-			result += integer.toString();
-		}
-
-		return result;
 	}
 }

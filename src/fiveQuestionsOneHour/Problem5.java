@@ -57,6 +57,7 @@ public class Problem5 {
 		for (int i = 0; i < branches.size(); i++) {
 			branches.set(i, digit + sign + branches.get(i));
 		}
+		
 		return branches;
 	}
 }

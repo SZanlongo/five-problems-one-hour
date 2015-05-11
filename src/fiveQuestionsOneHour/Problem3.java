@@ -16,17 +16,17 @@ public class Problem3 {
 		if (l < 0) {
 			throw new IndexOutOfBoundsException("Cannot have array < 0");
 		}
-		
+
 		long[] f = new long[l];
-		
+
 		if (l >= 1) {
 			f[0] = 0;
 		}
-		
+
 		if (l >= 2) {
 			f[1] = 1;
 		}
-		
+
 		for (int i = 2; i < l; i++) {
 			f[i] = f[i - 1] + f[i - 2];
 		}

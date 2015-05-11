@@ -29,7 +29,7 @@ public class Problem2 {
 				c[z++] = b[y++];
 			}
 		}
-
+		
 		return c;
 	}
 }
